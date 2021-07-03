@@ -1,0 +1,221 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>Climate! A vital resource</title>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"
+></script>
+
+<link rel="stylesheet" href="styles.css" />
+
+<nav>
+  <h1 class="logo">Climate Change</h1>
+  <ul>
+    <li><a href="#news">News</a></li>
+    <li><a href="#current-situation">Current Situation</a></li>
+    <li><a href="#ways-to-prevent">Ways to prevent</a></li>
+    <li><a href="#fun-zone">Fun Zone</a></li>
+  </ul>
+</nav>
+
+<div
+  id="carouselExampleControls news"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <% articles.forEach((article, index) => { %> <% if(index === 0) { %>
+    <div class="carousel-item active">
+      <div
+        class="news-article d-block w-100"
+        style="
+          background-image: url(<%=article.urlToImage%>);
+          width: 100%;
+          height: 80vh;
+          background-repeat: no-repeat;
+        "
+      >
+        <h1 class="headline">
+          <%= article.title %>
+          <br />
+          <br />
+          <!-- -->
+          <a href="<%=article.url%>"
+            ><button class="btn btn-outline-secondary">Read More</button>
+          </a>
+        </h1>
+      </div>
+    </div>
+    <%} else {%>
+    <div class="carousel-item">
+      <div
+        class="news-article d-block w-100"
+        style="
+          background-image: url(<%=article.urlToImage%>);
+          width: 100%;
+          height: 80vh;
+          background-repeat: no-repeat;
+        "
+      >
+        <h1 class="headline">
+          <%= article.title %>
+          <br />
+          <br />
+          <!-- -->
+          <a href="<%=article.url%>"
+            ><button class="btn btn-outline-secondary">Read More</button>
+          </a>
+        </h1>
+      </div>
+    </div>
+    <% } %> <%})%>
+
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div id="current-situation">
+  <h1>Climate Change : <span class="grim-text">A Grim Situation</span></h1>
+  <p>
+    The world has taken a huge hit to its climate in the past few decades.
+    Almost every physical feature of the world has been impacted.
+  </p>
+  <ul class="impacts-list">
+    <b>Some of the worst impacts include:</b>
+    <li>Melting of Ice Caps in Antarctica due to global warming.</li>
+    <li>The average temperature of Earth rising by about 1° Celsius.</li>
+    <li>
+      The amount of CO<sub>2</sub> increasing in the atmosphere, trapping more
+      sunlight.
+    </li>
+    <li>
+      Rise in sea-level, increasing the chances of tsunamis and earthquakes. 😬
+    </li>
+    <li>The AQI rising sharply, making the breathable air toxic for many.</li>
+  </ul>
+
+  <div style="text-align: center">
+    <p>
+      The following image very accurately displays how climate change affects
+      our daily lives:
+    </p>
+    <img
+      src="https://www.researchgate.net/profile/Juan-Blanco-19/publication/255819132/figure/fig1/AS:332999125159945@1456404587055/Flow-chart-of-climate-change-impacts-on-forest-ecosystem-production-It-only-focuses.png"
+      alt="climate-change-image"
+    />
+  </div>
+  <cite>Credit: ResearchGate</cite>
+</div>
+
+<div class="gradient-transition"></div>
+
+<div id="ways-to-prevent">
+  <h1>So, we know the situation. How do we prevent it from worsening?</h1>
+  <br>
+  <h4>
+    There are many ways to reverse or at least reduce the pace of climate
+    change. Some of the most straightforward ones that can be carried out by
+    every individual easily in everyday life:
+  </h4>
+  <br />
+  <div class="hover-orbs">
+    <div class="hover-orb">
+      <div class="visible"><h5>Reduce usage of cars</h4></div>
+      <div class="hidden">
+        Take bicycles to work instead. It will help to decrease your carbon
+        footprint and it's also a great way to stretch those muscles!
+      </div>
+    </div>
+    <div class="hover-orb">
+      <div class="visible"><h5>Harvest rainwater</h4></div>
+      <div class="move-up hidden">
+        Using home equipment, try to store rainwater. Spread awareness about
+        importance of conservation of water; urge people to use water
+        judiciously.
+      </div>
+    </div>
+    <div class="hover-orb">
+      <div class="visible"><h5>Plant a tree</h4></div>
+      <div class="hidden">
+        This has all sorts of benefits for the environment - like reducing the
+        CO<sub>2</sub> amount - and it gives you a pass time as well.
+      </div>
+    </div>
+    <div class="hover-orb">
+      <div class="visible"><h5>Reduce meat intake</h4></div>
+      <div class="hidden">
+        Meat harvesting produces about 100 tonnes of methane, a deadly gas,
+        every year. Reducing its intake will decrease the toxic amount.
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+
+<div class="gradient-transition-reverse"></div>
+
+<div id="fun-zone">
+  <h1 align="center">Fun Zone!</h1>
+
+  <div class="d-flex">
+    <div>
+      <h2>Games</h2>
+      <p>
+        Play fun-filled exciting games on climate change:
+      </p>
+      <br />
+      <a href="https://climatekids.nasa.gov/menu/play/">Play Games 👉</a>
+    </div>
+    <div>
+      <h2>Videos</h2>
+      <p>
+        Interested in this topic? Learn more with in-depth videos about climate
+        change and global warming.
+      </p>
+      <br />
+      <a href="https://www.youtube.com/watch?v=wbR-5mHI6bo"
+        >Can we still save the climate?</a
+      >
+    </div>
+    <div>
+      <h2>Resources</h2>
+      <p>
+        Want to research more on the topic? Check out the NASA website:
+      </p>
+      <br />
+      <a href="https://climate.nasa.gov/">NASA climate website</a>
+    </div>
+  </div>
+</div>
+<div class="gradient-transition"></div>
+<footer>
+  <h3>Made by Vedant Saini</h3>
+  <p>Copyright © 2021</p>
+  <h4 align="center">Made with ❤ and <i class="fab fa-node-js"></i></h4>
+</footer>
+
